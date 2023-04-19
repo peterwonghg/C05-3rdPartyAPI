@@ -31,12 +31,15 @@ THEN the saved events persist
 ```
 
 ## blockColour Function: Changes the colour of the hour block based on time
+```
 WHEN Time has past
 THEN Time Block background turns Grey to represent the past
 WHEN Time is the present
 THEN Time Block background turns Red to represent the present hour
 WHEN Time is going to be the future
 THEN Time Block background turns Green to represent the future
+```
+
 ![Time Block changes colour to represent past, present and future](./Assets/01timeBlockFunctionality.png)
 
 
