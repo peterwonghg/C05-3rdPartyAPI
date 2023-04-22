@@ -30,6 +30,7 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+
 ## blockColour Function: Changes the colour of the hour block based on time
 ```
 WHEN Time has past
@@ -41,6 +42,28 @@ THEN Time Block background turns Green to represent the future
 ```
 
 ![Time Block changes colour to represent past, present and future](./Assets/01timeBlockFunctionality.png)
+
+
+## Time Element display
+Used jQuery to display the current date, time and GMT time zone of the local machine
+
+![Date and Time Element](./Assets/02datetimeElement.png)
+
+
+
+## scheduleInput Function:
+
+
+
+
+
+## Reference
+
+https://developer.mozilla.org/en-US/
+
+https://www.w3schools.com/
+
+
 
 
 
