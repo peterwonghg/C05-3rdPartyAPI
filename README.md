@@ -1,5 +1,10 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
+Deployed URL: https://peterwonghg.github.io/C05-3rdPartyAPI/
+
+GitHUb URL: https://github.com/peterwonghg/C05-3rdPartyAPI.git
+
+
 ## Your Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
