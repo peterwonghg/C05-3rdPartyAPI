@@ -79,12 +79,31 @@ function newTime() {
 
     });
 
+
+  function updateColour() {
+    $('.time-block').each(function() {
+      // Declaring the blockHour by parsing the blockHour string into integers
+      const blockHour = parseInt(this.id);
+      // In the present time when blockHour is equal to the nowHour, remove the past & future class and add the present class
+      if (blockHour == nowHour) {
+        $(this).removeClass('past future').addClass('present');
+      // In the past time when blockHour is less to the nowHour, remove the present & future class and add the past class  
+      } else if (blockHour < nowHour) {
+        $(this).removeClass('future present').addClass('past');
+      // In the future besides past & present, remove the present & past class and add the future class    
+      } else {
+        $(this).removeClass('past present').addClass('future');
+      }
+      console.log(parseInt(this.id))
+    });
+  }
+
     // Call hourColour function
     hourColour();
        // Call scheduleInput function
     scheduleInput();
        // Call updateColour function                
-    // updateColour();             
+    updateColour();             
 
     // Updating newTime function every second
     setInterval(newTime, 1000); 
