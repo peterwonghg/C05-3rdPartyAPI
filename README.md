@@ -52,7 +52,9 @@ Used jQuery to display the current date, time and GMT time zone of the local mac
 
 
 ## scheduleInput Function:
+This function allows the ability to store the input at eaxch textarea of the blockHour to be locally stored and recalled corresponding to their respective blockHour
 
+![Displayiing the appointment and retaining appointment data in local storage](./Assets/03scheduleInput.png)
 
 
 

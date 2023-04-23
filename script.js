@@ -51,12 +51,40 @@ function newTime() {
         $(this).toggleClass('future', blockHour > nowHour);
       });
     }
-  
 
+    // #Creating the scheduleInput function
+    // scheduleInput function will save the text in the block hour text area when the corresponnding save button is clicked
+    function scheduleInput() {
+      // #When the save button at the hour block is clicked, run the scheduleInput function
+      $('.saveBtn').on('click', function() {
+        // #Usng attr() to get the attribute value of that hour block (id) located as the parent in the HTML DOM tree
+        const key = $(this).parent().attr('id');
+        // #Using the val() method to return or set the attribute value to the text entered defined as the sibling
+        const value = $(this).siblings('.description').val();
+        // #Using the setItem method to save into localStorage with the corresponding key name and value
+        localStorage.setItem(key, value);
+      });
+    }
+
+    // This will get the user input from the localStorage and set textarea values for each time block.
+    
+    // #For each time block, the value at the local storage is set as the textarea values
+    $('.time-block').each(function() {
+      // #Declaring key
+      const key = $(this).attr('id');
+      // #Declaring value
+      const value = localStorage.getItem(key);
+      // #Display local storage value in the corresponding textarea
+      $(this).children('.description').val(value);  
+
+    });
 
     // Call hourColour function
     hourColour();
-             
+       // Call scheduleInput function
+    scheduleInput();
+       // Call updateColour function                
+    // updateColour();             
 
     // Updating newTime function every second
     setInterval(newTime, 1000); 
